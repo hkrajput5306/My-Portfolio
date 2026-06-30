@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-dark: #0b0c15;
+  --color-brand-card: rgba(17, 18, 36, 0.6);
+  --color-brand-border: rgba(255, 255, 255, 0.08);
+}
+
+@utility glass-card {
+  background: rgba(17, 18, 36, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+@utility glass-card-hover {
+  background: rgba(25, 26, 50, 0.7);
+  border-color: rgba(168, 85, 247, 0.3);
+  box-shadow: 0 12px 40px 0 rgba(168, 85, 247, 0.15);
+}
+
+@utility text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@utility animate-blob {
+  animation: blob-bounce 8s infinite alternate ease-in-out;
+}
+
+@utility animate-blob-reverse {
+  animation: blob-bounce-reverse 10s infinite alternate ease-in-out;
+}
+
+@keyframes blob-bounce {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  50% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  100% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+
+@keyframes blob-bounce-reverse {
+  0% {
+    transform: translate(0px, 0px) scale(0.9);
+  }
+  50% {
+    transform: translate(-30px, 40px) scale(1.15);
+  }
+  100% {
+    transform: translate(15px, -15px) scale(1);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0c15;
+}
+::-webkit-scrollbar-thumb {
+  background: #252849;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3c4078;
+}
+
+html {
+  scroll-behavior: smooth;
+}
